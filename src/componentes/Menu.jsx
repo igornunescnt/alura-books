@@ -1,16 +1,29 @@
-import './Menu.css';
 
+import styled from 'styled-components';
 
+const Opcoes = styled.ul`
+    display: flex;
+    width: 30%;
+    height: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Opcao = styled.li`
+    font-size: 20px;
+    color: #002d52;
+`;
 
 export default function Menu() {
 
   const opcoes = ['CATEGORIAS', 'MINHA ESTANTE', 'FAVORITOS'];
 
   return (
-    <ul className='opcoes'>
+    <Opcoes>
           {opcoes.map((texto) => (
-            <li className='opcao'>{texto}</li>
+            <Opcao>{texto}</Opcao>
           ))}
-    </ul>
+    </Opcoes>
   )
 }
